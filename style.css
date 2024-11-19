@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Margarine&display=swap');
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #0d0d4d;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 30px;
+  font-family: Margarine;
+  font-weight: bold;
+  color: #fd9b2e;
+  margin-right: 10px;
+}
+
+.logo {
+  width: 80px; 
+  height: 64px;
+  padding: 0px;
+  margin: 0px;
+  /*border: 1px solid black;*/
+}
+
+.logo > img {
+  width: 80px;
+  height: 64px;
+  margin: 0px;
+}
+
+.separator {
+  width: 48px;
+  height: 50px;
+  border-right: 1px solid #fd9b2e;
+  margin-top: 0px;
+  margin-right: 40px;
+  margin-bottom: 0px;
+  margin-left: 5px;
+}
+
+nav {
+  flex-grow: 1;
+  text-align: left;
+  /*border: 1px solid black;*/
+}
+
+nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /*border: 1px solid red;*/
+}
+
+nav > ul > li {
+  display: inline;
+  position: relative;
+  /*border: 1px solid yellow;*/
+}
+
+nav > ul > li > a{
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  margin-left: 1px;
+  margin-right: 1px;
+  /*border: 1px solid blue;*/
+}
+
+.subtitle{
+  font-size: 16px; 
+}
+
+.subtitle:hover{
+  color: #f4fb21;
+  background-color:#6096e1;
+}
+
+h1 {
+  text-align: center;
+  color: #fd9b2e;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Dropdown menu */
+
+nav ul li.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  text-align: center;
+  top: 150%; /* Position dropdown menu below the parent */
+  left: 0; /* Align with the left edge of the parent */
+  background-color: lightblue;
+  width: 140px;
+  /*border: 1px solid red;*/
+  border-bottom: 3px solid #4e4caf;
+  padding: 0px;
+}
+
+.dropdown-menu > li {
+  display: block;
+  border-top: 3px solid #4e4caf;
+  border-right: 3px solid #4e4caf;
+  border-left: 3px solid #4e4caf;
+  padding: 10px;
+}
+
+.dropdown-menu > li:hover {
+  background-color:#6096e1;
+  color: #f4fb21;
+}
+
+.dropdown-menu > li > a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px; 
+  /*border: 1px solid purple;*/
+}
+
+/* Search Bar */
+
+.search-bar {
+  flex-grow: 1;
+  text-align: right;
+  display: flex;
+  position: relative;
+}
+
+.search-bar input[type="text"] {
+  padding: 8px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+#searchInput {
+  /* border: 1px solid gray; */
+  /* border: 2px solid orange; */
+  border: 2px solid #0d0d4d;
+}
+
+.search-bar button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #219024;
+}
+
+/* Suggestions */
+
+.suggestions {
+  position: absolute;
+  top: 32px;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 310px;
+  z-index: 10;
+  max-height: 150px;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.suggestion-item {
+  padding: 10px;
+  color: black;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Grid Layout */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-gap: 20px; /* Gap between items */
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+  border: 4px solid #ccc;
+  border-radius: 15px;
+}
+
+.grid-item:hover {
+  background-color: #8dd9e8;
+  border: 4px solid #5097ed;
+}
+
+.grid-item > img {
+  width: 285px;
+  height: 256px;
+}
+
+.grid-item button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* rent button */
+
+.rentbtn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 5px;
+  border-radius: 5px;
+  width: 100%
+}
+
+.rentbtn:hover {
+  background-color: #219024;
+}
+
+/* Reservation */
+
+.reservation-container {
+  display: flex;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+
+.reservation-details {
+  background-color: #8de88f;
+  border: 4px solid #60ed50;
+  border-radius: 20px;
+  text-align: center;
+  vertical-align: middle;
+  width: 150px;
+  height: 400px;
+  padding: 25px;
+  margin-right: 20px;
+}
+
+.reservation-details img {
+  width: 126px;
+  height: 126px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.reservation-details h3 {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.reservation-details p {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.reservation-controls {
+  background-color: #8dd9e8;
+  border: 4px solid #5097ed;
+  border-radius: 20px;
+  display: flex;
+  text-align: left;
+  vertical-align: middle;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 400px;
+  padding: 25px;
+  margin-left: 20px;
+}
+
+.reservation-controls input,
+.reservation-controls button {
+  margin: 10px;
+}
+
+.reservationForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.reservationForm label {
+  margin-top: 20px;
+}
+
+.reservationForm input[type="text"],
+.reservationForm input[type="date"],
+.reservationForm input[type="email"],
+.reservationForm input[type="tel"] {
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.reservationForm button {
+  margin-top: 50px;
+  padding: 10px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.reservationForm button:disabled {
+  background-color: #aaa;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid yellow; */
+}
+
+.quantity button {
+  width: 30px;
+  height: 30px;
+}
+
+.quantity label {
+  width: 10px;
+  height: 30px;
+}
+
+#decreaseQuantity {
+  background: #e81919;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+#decreaseQuantity:hover {
+  background: #a61616;
+}
+
+#increaseQuantity {
+  background: #249a27;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+#increaseQuantity:hover {
+  background: #188916;
+}
+
+#quantity {
+  width: 40px;
+}
+
+#totalCost {
+  font-weight: bold;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:valid {
+  border: 2px solid green;
+}
+
+#cancelReservation {
+  width: 100px;
+  height: 30px;
+  background-color: lightyellow;
+  border: 2px solid yellow;
+  border-radius: 10px;
+}
+
+#cancelReservation:hover {
+  background-color: yellow;
+  border: 2px solid rgb(185, 185, 0);
+}
+
+#submitReservation {
+  width: 100px;
+  height: 30px;
+  background-color: lightgreen;
+  border: 2px solid limegreen;
+  border-radius: 10px;
+}
+
+#submitReservation:disabled {
+  background-color: lightgray;
+  border: 2px solid grey;
+  border-radius: 10px;
+  cursor: not-allowed;
+}
+
+#submitReservation:not(:disabled):hover {
+  background-color: limegreen;
+  border: 2px solid green;
+  border-radius: 10px;
+}
+
+/* Confirmation page */
+
+.finish {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  width: 300px;
+  padding: 20px;
+  color: white;
+  font-size: 16px;
+  margin: 20px;
+  text-decoration: none;
+}
+
+.finish:hover {
+  background-color: #219024;
+}
+
+.container {
+  max-width: 300px;
+  margin: 50px auto;
+  padding: 50px 100px;
+  background-color: lightblue;
+  border: 4px solid lightskyblue;
+  border-radius: 15px;
+}
+
+.container > h2 {
+  margin-bottom: 50px;
+}
+
+.container > p {
+  margin-bottom: 50px;
+}
